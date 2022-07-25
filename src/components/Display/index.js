@@ -8,14 +8,22 @@ function Display() {
 
   const lastPadTouched = useSelector((state) => state.drum.lastPadTouched)
   const volume = useSelector((state) => state.drum.volume)
+  const powered = useSelector((state) => state.drum.powered)
 
   useEffect(() => {
-    setDisplay(lastPadTouched)
+    if (powered)
+      setDisplay(lastPadTouched)
   }, [lastPadTouched])
 
   useEffect(() => {
-    setDisplay('Volume ' + volume)
+    if (powered)
+      setDisplay('Volume ' + volume)
   }, [volume])
+
+  useEffect(() => {
+    if (!powered)
+      setDisplay('')
+  }, [powered])
 
   useEffect(() => {
     setDisplay('')
