@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f1faee;
+    
+    h1 {
+        user-select: none;
+        width: 100%;
+        text-align: center;
+    }
+}

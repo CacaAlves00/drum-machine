@@ -1,0 +1,12 @@
+#drum-machine {
+    border: 1px solid black;
+    width: 60vw;
+    height: 25vw;
+    margin: 5vw auto;
+    display: flex;
+    justify-content: space-around;
+
+    & > * {
+        width: 40%;
+    }
+}

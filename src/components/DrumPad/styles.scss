@@ -1,0 +1,22 @@
+.drum-pad {
+    border: 1px solid black;
+    width: 30%;
+    height: 30%;
+    background-color: #a8dadc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #93c8ca;
+    }
+
+    & > * {
+        user-select: none;
+    }
+
+}
